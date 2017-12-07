@@ -8,6 +8,8 @@ function start () {
   // when you mouse over it.
   one()
   two()
+  three()
+  four()
 
   // Your turn! Create a new function called `two`, then call it from here.
 }
@@ -29,9 +31,19 @@ function one () {
    two.addEventListener('mouseenter',makeGreen)
    two.addEventListener('mouseleave',makeWhite)
  }
-// CREATE FUNCTION three HERE
 
-// CREATE FUNCTION four HERE
+ function three(){
+   var three = document.getElementById('three');
+   three.addEventListener('mouseenter',makeOrange)
+   three.addEventListener('mouseleave',makeWhite)
+ }
+ function four(){
+   var four = document.getElementById('four');
+   four.addEventListener('click',makeYellow);
+   four.addEventListener('mouseleave',makeWhite);
+ }
+
+
 
 // Changes the background color of event's target
 function makeBlue (evt) {
@@ -43,4 +55,10 @@ function makeWhite (evt) {
 }
 function makeGreen (evt) {
   evt.target.style.backgroundColor= 'green'
+}
+function makeOrange(evt){
+  evt.target.style.backgroundColor='orange'
+}
+function makeYellow(evt){
+  evt.target.style.backgroundColor = 'yellow';
 }
